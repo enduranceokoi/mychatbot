@@ -1,0 +1,221 @@
+::before, ::after,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.chatbox{
+    width: 100%; 
+    height: 100vh;
+    background-color: #e3edf7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatinterface{
+    width: 60%;
+    height: 70%;
+    background: #fff;
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.chatinterfaces{
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+    height: 30px;
+}
+.chatboxname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    gap: 10px;
+    box-shadow: 0 3px black;
+}
+.chatboxname .botname{
+    font-family: monospace;
+    font-weight:600 ;
+}
+.chatcontant{
+    width: 100%;
+    height: 75%;
+    scroll-behavior: smooth;
+    padding: 5px 6px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    /* border: 2px solid hotpink; */
+
+}
+.typeArea{
+    width: 100;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    background: darkblue;
+    position: relative;
+    z-index: 10;
+    /* border: 2px dotted yellow; */
+}
+.typeArea input{
+    width: 90%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color:#fff ;
+    background: transparent;
+}
+.typeArea input::placeholder{
+    color: white;
+}
+.typeArea button{
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+    /* border: 2px solid white; */
+}
+
+.typeArea button:active{
+    opacity: 0.9;
+}
+
+.chats{
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    background-color: silver;
+    padding: 10px;
+    
+    /* border: 2px dotted red; */
+
+}
+.user-chat{
+    justify-self: flex-end;
+    border-start-end-radius:25px ;
+    border-start-start-radius: 25px;
+    border-end-start-radius: 25px;
+}
+.chtTxt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chtTxt p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.robot-chat{
+    justify-self: flex-start;
+    background-color: blue;
+    color: #fff;
+    border-start-start-radius:25px ;
+    border-start-end-radius: 25px;
+    border-end-end-radius: 25px;
+}
+.animatewrap{
+    display: flex;
+    gap: 4px;
+    width: 30px;
+    /* border: 1px solid yellow; */
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+
+}
+.animate{
+    width: 4px;
+    height: 4px;
+    border-radius: 20px;
+    background: #fff;
+    display: inline-block;
+    position: relative;
+    animation: thinging .7s ease-in-out infinite;
+}
+.animate:nth-child(2){
+    animation-delay: .5s;
+}
+.animate:nth-child(3){
+    animation-delay: 1s;
+}
+@keyframes thinging{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 8px;
+    }
+}
+.robotIcon{
+    position: relative;
+}
+.chatinit:disabled{
+    background-color: silver;
+    cursor: no-drop;
+
+}
+.searchOnline{
+    position: absolute;
+    width: 120px;
+    /* padding:  10px 1rem; */
+    height: 20px;
+    bottom: 0;
+    /* border: 2px solid blue; */
+}
+.reboticon{
+    position: relative;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.searchOnlines{
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: fixed;
+
+}
+.searchOnlines.active{
+    background-color: #000;
+    color: yellow;
+}
+    
+
+/*  
+::selection{
+    background-color: yellow;
+    color: black;
+    user-select: none;
+}
+  */
+
+
+@media (max-width:776px){
+    .chatinterface{
+        width: 80%;
+    }
+
+
+}
+@media (max-width:500px){
+    .chatinterface{
+        width: 90%;
+    }
+    .chatinterface
+    .searchOnlines{
+        width: max-content;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width:300px){
+    .chatinterface{
+        width: 95%;
+    }
+}
+    
