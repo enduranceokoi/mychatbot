@@ -28,7 +28,7 @@ const Respons = [
         Response1: `my is Endurance chatbot what's your?`,
         Response2: `friends call me chatbot`,
         Response3: `Endurance chatbot and your?`,
-        Response4: `how may i help be of help to your `,
+        Response4: `how may i be of help to you`,
 
     }
 

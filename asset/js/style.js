@@ -21,7 +21,6 @@ btninvoker.addEventListener('click', function(event){
 
 
     // UseGemini(); 
-    // useLocal();
 
     letScroll();
 
@@ -151,7 +150,7 @@ try{
 
 // console.log(UseGemini('how many state is in nigeria'))
 
- async function useLocal(txt){
+function useLocal(txt){
     // alert(txt)
     let userPrompt = txt;
     let cht
@@ -177,7 +176,7 @@ try{
         cht = Respons[1];
         key = Object.keys(cht);
 
-         mychat = cht[Math.floor(Math.random () * key.length)];
+         mychat = key[Math.floor(Math.random () * key.length)];
         
 
         return cht[mychat];
@@ -189,7 +188,7 @@ try{
         cht = Respons[2];
         key = Object.keys(cht);
 
-         mychat = cht[Math.floor(Math.random () * key.length)];
+         mychat = key[Math.floor(Math.random () * key.length)];
         
 
         return cht[mychat];
@@ -205,12 +204,12 @@ try{
     let AllresponsePtag = document.querySelectorAll('.thinking');
     let lastP = AllresponsePtag[AllresponsePtag.length - 1];
 
-// console.log(response)
+console.log(response)
 // alert(EnableWebSarch())
     let start = 0;
     let time = setInterval(() =>{
         lastP.innerHTML += response.charAt(start);
-        // l
+         letScroll();
 
 
         if(start >= response.length){
