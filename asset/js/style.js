@@ -200,7 +200,7 @@ function useLocal(txt){
 
  async function bot(rtn , txt){
 
-    let response = EnableWebSarch() ? await UseGemini(txt) : useLocal(txt);
+    let response = /*EnableWebSarch() ?*/ await UseGemini(txt); /*: useLocal(txt);*/
     let AllresponsePtag = document.querySelectorAll('.thinking');
     let lastP = AllresponsePtag[AllresponsePtag.length - 1];
 
